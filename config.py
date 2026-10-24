@@ -4,7 +4,7 @@ Values default to sensible constants but can be overridden with environment
 variables (loaded from a local .env file if present):
 
     PROVIDER      LLM provider name (default: "groq")
-    MODEL         Model identifier (default: "qwen/qwen3-32b")
+    MODEL         Model identifier (default: "qwen3.8-27b")
     TEMPERATURE   Sampling temperature, 0.0-2.0 (default: 0.3)
     MAX_TOKENS    Max tokens to generate, > 0 (default: 500)
 
@@ -50,7 +50,7 @@ def _get_int(name: str, default: int, minimum: int) -> int:
 
 PROVIDER: str = os.getenv("PROVIDER", "groq")
 
-MODEL: str = os.getenv("MODEL", "qwen/qwen3-32b")
+MODEL: str = os.getenv("MODEL", "qwen3.8-27b")
 
 TEMPERATURE: float = _get_float("TEMPERATURE", default=0.3, minimum=0.0, maximum=2.0)
 

@@ -129,14 +129,15 @@ The chatbot needs a Groq API key to work.
 
 ### Optional Settings
 
-You can override these defaults in `.env` (all optional):
+The app has defaults for these settings, so you only need to add them to `.env`
+if you want to override those defaults:
 
-| Variable      | Default          | Description                             |
-|---------------|------------------|-----------------------------------------|
-| `PROVIDER`    | `groq`           | LLM provider name.                      |
-| `MODEL`       | `qwen/qwen3-32b` | Model identifier to use.                |
-| `TEMPERATURE` | `0.3`            | Sampling randomness, `0.0`–`2.0`.       |
-| `MAX_TOKENS`  | `500`            | Maximum tokens in a single reply, `> 0`.|
+| Variable      | Default       | Description                              |
+|---------------|---------------|------------------------------------------|
+| `PROVIDER`    | `groq`        | LLM provider name.                       |
+| `MODEL`       | `qwen3.8-27b` | Model identifier to use.                 |
+| `TEMPERATURE` | `0.3`         | Sampling randomness, `0.0`–`2.0`.        |
+| `MAX_TOKENS`  | `500`         | Maximum tokens in a single reply, `> 0`. |
 
 Invalid values (e.g. a non-numeric `TEMPERATURE`) cause the app to fail
 immediately at startup with a clear error message.
@@ -258,4 +259,3 @@ When active, your prompt shows `(.venv)`.
 | `uv run pytest` | Run the test suite |
 | `uv pip list` | List installed packages |
 | `uv venv` | Create a virtual environment manually |
-
